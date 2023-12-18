@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PersonelHüsoDataSet" targetNamespace="http://tempuri.org/PersonelHüsoDataSet.xsd" xmlns:mstns="http://tempuri.org/PersonelHüsoDataSet.xsd" xmlns="http://tempuri.org/PersonelHüsoDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PersonelHüsoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PersonelHüsoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HüsoPersonelTakipSistemi.Properties.Settings.GlobalReference.Default.PersonelHüsoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PersonelsTableAdapter" GeneratorDataComponentClassName="PersonelsTableAdapter" Name="Personels" UserDataComponentName="PersonelsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PersonelHüsoConnectionString (Settings)" DbObjectName="PersonelHüso.dbo.Personels" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT HasComputer FROM dbo.Personels</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="HasComputer" DataSetColumn="HasComputer" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PersonelHüsoDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="PersonelHüsoDataSet" msprop:Generator_DataSetName="PersonelHüsoDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Personels" msprop:Generator_RowEvHandlerName="PersonelsRowChangeEventHandler" msprop:Generator_RowDeletedName="PersonelsRowDeleted" msprop:Generator_RowDeletingName="PersonelsRowDeleting" msprop:Generator_RowEvArgName="PersonelsRowChangeEvent" msprop:Generator_TablePropName="Personels" msprop:Generator_RowChangedName="PersonelsRowChanged" msprop:Generator_RowChangingName="PersonelsRowChanging" msprop:Generator_TableClassName="PersonelsDataTable" msprop:Generator_RowClassName="PersonelsRow" msprop:Generator_TableVarName="tablePersonels" msprop:Generator_UserTableName="Personels">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HasComputer" msprop:Generator_ColumnPropNameInRow="HasComputer" msprop:Generator_ColumnPropNameInTable="HasComputerColumn" msprop:Generator_ColumnVarNameInTable="columnHasComputer" msprop:Generator_UserColumnName="HasComputer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
